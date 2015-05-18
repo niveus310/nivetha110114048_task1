@@ -1,0 +1,42 @@
+<!-- color changing boxes-task1 -->
+DOCTYPE html>
+<html>
+<head>
+
+<style> <!-- button dimensions -->
+input[type=button]
+ {
+width:150px;
+height:100px;
+}
+</style>
+
+<script> m\<!-- Js function to change color -->
+function setColor(btn)
+	{
+    var c=1;
+    var ranclr = '#' + (Math.random() * 0xFFFFFF << 0).toString(16); <!-- generation of random color using math.random() -->
+    var property = document.getElementById(btn);
+    if (c == 0){
+        property.style.backgroundColor = ranclr;
+        c=1;        
+       }
+    else
+     {
+        property.style.backgroundColor = ranclr;
+        c=0;
+        }
+
+}
+</script>
+
+</head>
+
+<body>
+<input type="button" id="button" value = "        " onclick="setColor('button1')";/>
+
+<input type="button" id="button1" value = "        " onclick="setColor('button')";/>
+
+</body>
+
+</html>
